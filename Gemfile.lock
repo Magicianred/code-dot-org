@@ -714,7 +714,7 @@ GEM
       json (~> 1.4)
     recaptcha (4.6.3)
       json
-    redcarpet (3.3.4)
+    redcarpet (3.5.1)
     redis (3.3.3)
     representable (3.1.1)
       declarative (< 0.1.0)
@@ -1025,7 +1025,7 @@ DEPENDENCIES
   rails-controller-testing (~> 1.0.5)
   rambling-trie
   recaptcha
-  redcarpet (~> 3.3.4)
+  redcarpet (~> 3.5.1)
   redis (~> 3.3.3)
   redis-slave-read!
   require_all

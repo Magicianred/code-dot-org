@@ -194,7 +194,7 @@ gem 'newrelic_rpm', group: [:staging, :development, :production], # perf/error/e
   # https://github.com/newrelic/newrelic-ruby-agent/issues/340
   github: 'code-dot-org/newrelic-ruby-agent', ref: 'PR-359_prevent_reconnect_attempts_during_shutdowns'
 
-gem 'redcarpet', '~> 3.3.4'
+gem 'redcarpet', '~> 3.5.1'
 
 gem 'geocoder'
 
