@@ -63,20 +63,4 @@ SpriteLab.prototype.onPause = function(isPaused) {
 
 SpriteLab.prototype.setupReduxSubscribers = function(store) {
   P5Lab.prototype.setupReduxSubscribers.call(this, store);
-  let state = {};
-  store.subscribe(function() {
-    const lastState = state;
-    state = store.getState();
-
-    if (
-      lastState.animationList?.propsByKey !== state.animationList?.propsByKey
-    ) {
-      if (window.Blockly && Blockly.mainBlockSpace) {
-        const customEvent = utils.createEvent(
-          Blockly.BlockSpace.EVENTS.ANIMATIONS_CHANGED
-        );
-        Blockly.mainBlockSpace.events.dispatchEvent(customEvent);
-      }
-    }
-  });
 };

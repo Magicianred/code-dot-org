@@ -65,7 +65,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('BlockFieldHelper');
   blocklyWrapper.wrapReadOnlyProperty('Blocks');
   blocklyWrapper.wrapReadOnlyProperty('BlockSvg');
-  blocklyWrapper.wrapReadOnlyProperty('BlockValueType');
   blocklyWrapper.wrapReadOnlyProperty('common_locale');
   blocklyWrapper.wrapReadOnlyProperty('Connection');
   blocklyWrapper.wrapReadOnlyProperty('ContextMenu');
@@ -163,6 +162,24 @@ function initializeBlocklyWrapper(blocklyInstance) {
   Object.defineProperty(blocklyWrapper, 'SVG_NS', {
     get: function() {
       return this.blockly_.utils.dom.SVG_NS;
+    }
+  });
+
+  Object.defineProperty(blocklyWrapper, 'BlockValueType', {
+    get: function() {
+      return {
+        NONE: 'None',
+        STRING: 'String',
+        NUMBER: 'Number',
+        IMAGE: 'Image',
+        BOOLEAN: 'Boolean',
+        FUNCTION: 'Function',
+        COLOUR: 'Colour',
+        ARRAY: 'Array',
+        SPRITE: 'Sprite',
+        BEHAVIOR: 'Behavior',
+        LOCATION: 'Location'
+      };
     }
   });
 

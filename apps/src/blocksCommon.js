@@ -7,19 +7,7 @@ var commonMsg = require('@cdo/locale');
  * Install extensions to Blockly's language and JavaScript generator
  * @param blockly instance of Blockly
  */
-exports.install = function(blockly, blockInstallOptions) {
-  var skin = blockInstallOptions.skin;
-  var isK1 = blockInstallOptions.isK1;
-
-  installControlsRepeatSimplified(blockly, skin);
-  installControlsRepeatDropdown(blockly);
-  installNumberDropdown(blockly);
-  installPickOne(blockly);
-  installCategory(blockly);
-  installWhenRun(blockly, skin, isK1);
-  installJoinBlock(blockly);
-  installCommentBlock(blockly);
-};
+exports.install = function(blockly, blockInstallOptions) {};
 
 function installControlsRepeatSimplified(blockly, skin) {
   // Re-uses the repeat block generator from core

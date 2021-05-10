@@ -1218,7 +1218,7 @@ exports.createJsWrapperBlockCreator = function(
         const nextBlock =
           this.nextConnection && this.nextConnection.targetBlock();
         let handlerCode = Blockly.JavaScript.blockToCode(nextBlock, true);
-        handlerCode = Blockly.Generator.prefixLines(handlerCode, '  ');
+        // handlerCode = Blockly.Generator.prefixLines(handlerCode, '  ');
         if (callbackParams) {
           let params = callbackParams.join(',');
           values.push(`function (${params}) {\n${handlerCode}}`);
