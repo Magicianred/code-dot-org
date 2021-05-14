@@ -133,6 +133,7 @@ class LessonProgress extends Component {
                   key={index}
                   ref={isCurrent ? 'currentLevel' : null}
                   style={{
+                    ...styles.inner,
                     ...(level.isUnplugged && isCurrent && styles.pillContainer)
                   }}
                 >
